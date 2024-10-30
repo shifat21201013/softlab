@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #262525; /* Changed background color to black */
+            padding: 10px;
+            text-align: center; /* Center-align the nav items */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px;
+            margin-right: 10px;
+            border-radius: 5px; /* Rounded corners */
+            display: inline-block; /* Display as inline block */
+        }
+        nav a:hover {
+            background-color: #fff;
+            color: #dc3545;
+            border-radius: 4px;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #dc3545;
+            text-align: center;
+        }
+        .highlight {
+            background-color: #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .highlight p:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About Us</h1>
+</header>
+
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="#" style="background-color: #524f4f;">About Us</a> <!-- Style the About Us link -->
+    <a href="#">Blood Donation System</a>
+</nav>
+
+<div class="container">
+    <h2>Why Blood Donation System?</h2>
+    <div class="highlight">
+        <p>
+            Though Bangladesh has more than 160 million people, the number of safe blood banks is very few. Without divisional towns, there are hardly any blood banks. But a huge amount of blood is needed for treatment purposes. A good number of accidents take place every day where blood is needed essentially. As a result, people fall into real trouble to manage blood. But there are many blood donors who are interested in donating blood but don’t know who needs blood. The communication gap is resulting in the loss of many lives.
+        </p>
+        <p>
+            We come into the scenario to reduce or minimize the communication gap and connect people in a moment using the amazing power of SMS and email. As our services can also be availed by SMS, people from any class of society can easily avail of our services.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

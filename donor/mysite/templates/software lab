@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donation System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #343a40;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Blood Donation System</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="{% url 'another' %}">About us</a>
+    <a href="{% url 'signup' %}">Register</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</nav>
+
+<div class="content">
+    {% if request.user.is_authenticated %}
+        <p>Welcome, {{ request.user.username }}</p>
+    {% else %}
+        <!-- Removed Login and Signup buttons -->
+    {% endif %}
+
+    <h2>Donate blood, Save Life</h2>
+    <a href="{% url 'signup' %}" class="btn">Join as a Donor</a>
+
+
+    <ul>
+    </ul>
+
+</div>
+
+</body>
+</html>
